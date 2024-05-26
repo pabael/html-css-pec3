@@ -1,0 +1,69 @@
+@import 'colors'
+
+.about-us-container
+
+    .abba-page
+        display: flex
+        flex-direction: row-reverse
+
+        figcaption
+            text-align: right
+
+        p
+            margin-top: 40px
+
+    h2
+        text-align: center
+        margin-bottom: 20px
+
+    article
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+        align-items: start
+
+        section
+            margin: 0px 15px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+        .icon
+            height: 6em
+            animation: colorChange 4s infinite
+
+        @keyframes colorChange 
+            0% 
+                fill: var(--main-color)
+            
+            50% 
+                fill: var(--second-color)
+            
+            100% 
+                fill: var(--main-color)
+
+    @media (max-width: 1024px)
+        .abba-page p
+            margin-top: 15px
+        
+        article
+            display: flex
+            flex-direction: column
+
+    @media (max-width: 767px)
+        .abba-page
+            display: flex
+            flex-direction: column-reverse
+            justify-content: center
+            align-items: center
+        
+            figure
+                display: flex
+                flex-direction: column
+                justify-content: center
+                width: 40vw
+
+            img
+                width: 40vw
+                align-items: center

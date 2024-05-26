@@ -1,0 +1,187 @@
+@import 'portada'
+@import 'discos'
+@import 'albumes'
+@import 'about-us'
+@import 'enlaces'
+@import 'colors'
+
+body
+    background-color: var(--background-color)
+    margin: 0
+    min-height: 100vh
+
+li
+    list-style: none
+    margin: 0px 10px
+
+a
+    text-decoration: none
+    color: inherit
+
+h1
+    color: var(--main-color)
+    font-size: 2em
+    text-align: center
+
+h2
+    color: var(--main-color)
+
+p
+    text-align: justify
+
+/*HEADER*/
+
+header
+    background-color: var(--second-color)
+    color: var(--main-color)
+    display: flex
+    flex-direction: row
+    padding: 20px
+    justify-content: center
+    align-items: center
+
+    .logo
+        height: 100px
+        cursor: pointer
+        padding-right: 20px
+
+    nav ul
+        display: flex
+        flex-direction: row
+        padding: 0
+
+    nav li a
+        border-bottom: 2px solid var(--main-color)
+        font-size: 1.5em
+
+    nav li a:hover, nav li a.active
+        color: var(--background-color)
+        border-bottom: 2px solid var(--background-color)
+  
+    @media (max-width: 767px)
+        nav li a
+            font-size: 1em
+
+        .logo
+            height: 80px
+
+    @media (max-width: 460px)
+        .logo
+            padding-right: 0px
+
+/*FOOTER*/
+
+footer
+    background-color: var(--second-color)
+    color: var(--main-color)
+    padding: 20px 70px
+    margin-top: auto
+    display: flex
+    flex-direction: row
+
+    nav
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 50vw
+        margin-left: auto
+
+    nav ul
+        display: flex
+        flex-direction: column
+        padding: 0
+        margin-bottom: 0
+
+    .albumes-pages ul
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 3vw
+
+    nav li
+        padding-bottom: 10px
+        text-align: left
+        margin: 0
+        align-self: center
+
+    nav li a
+        border-bottom: 2px solid var(--main-color)
+        font-size: 0.8em
+    
+    nav li a:hover
+        color: var(--background-color)
+        border-bottom: 2px solid var(--background-color)
+
+    h1
+        font-size: 1em
+        text-align: left
+        padding: 0
+        margin: 0
+
+    .logo
+        display: flex
+        flex-direction: column
+        margin-left: auto
+        margin-top: auto
+        margin-bottom: auto
+
+    .logo img
+        max-height: 100px
+        margin-left: auto
+        margin-right: auto
+        padding-bottom: 20px
+
+    p 
+        text-align: right
+        font-size: 0.8em
+        margin: 0
+
+    @media (max-width: 1120px)
+        nav
+            margin-left: 0
+            width: 60vw
+
+    @media (max-width: 890px)
+        nav 
+            .albumes-pages ul
+                grid-template-columns: 1fr 1fr
+
+    @media (max-width: 767px)
+        nav 
+            .main-pages
+                margin-right: 0
+        
+        .logo img
+            max-height: 70px
+
+    @media (max-width: 700px)
+        nav 
+            .albumes-pages ul
+                grid-template-columns: 1fr
+
+    @media (max-width: 560px)
+        flex-direction: column
+
+        .logo
+            margin-left: 0
+
+            img
+                margin-left: 0
+            
+            p
+                text-align: left
+
+
+/*MAIN*/
+
+main
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10vh 0
+    width: 80vw
+    margin: auto
+    min-height: 70vh
+
+@media (max-width: 767px)
+    main
+        padding: 5vh 0

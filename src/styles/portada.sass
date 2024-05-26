@@ -1,0 +1,287 @@
+@import 'colors'
+
+.portada-container
+  display: flex
+  flex-direction: column
+
+  .title h2
+    font-size: 1.5em
+    text-align: center
+
+  .timeline
+    margin-top: 30px
+    list-style-type: none
+    padding: 0
+    display: flex
+    flex-direction: column
+    position: relative
+
+    .vertical-line
+      width: 3px
+      height: 100%
+      background-color: var(--main-color)
+      position: absolute
+      left: 50%
+      
+      @media (max-width: 767px)
+        left: 0%
+
+    li
+      width:50%
+      margin: 0
+      padding: 0px 20px
+      box-sizing: border-box
+
+      @media (max-width: 767px)
+        width:100%
+        margin: 0
+        padding: 0px 20px
+
+      &:nth-child(odd)
+        text-align: right
+        padding-left: 60px
+
+        @media (max-width: 767px)
+          text-align: left
+          padding-left: 20px
+          padding-right: 60px
+
+      &:nth-child(even)
+        text-align: left
+        align-self: end
+        padding-right: 60px
+
+  .carousel
+    margin: auto
+    position: relative
+    width: 50vw
+    height: 200px
+    overflow: hidden
+    border: 2px solid #ddd
+    border-radius: 10px
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1)
+
+    .slides
+        display: flex
+        width: 1000%
+        animation: slide-animation 55s infinite
+
+    .slide
+        width: 10%
+        transition: transform 0.5s ease
+
+    @keyframes slide-animation
+      0% 
+        transform: translateX(0%)
+      9% 
+        transform: translateX(0%)
+      10% 
+        transform: translateX(-10%)
+      19% 
+        transform: translateX(-10%)
+      20% 
+        transform: translateX(-20%)
+      29% 
+        transform: translateX(-20%)
+      30% 
+        transform: translateX(-30%)
+      39% 
+        transform: translateX(-30%)
+      40% 
+        transform: translateX(-40%)
+      49% 
+        transform: translateX(-40%)
+      50% 
+        transform: translateX(-50%)
+      59% 
+        transform: translateX(-50%)
+      60% 
+        transform: translateX(-60%)
+      69% 
+        transform: translateX(-60%)
+      70% 
+        transform: translateX(-70%)
+      79% 
+        transform: translateX(-70%)
+      80% 
+        transform: translateX(-80%)
+      89% 
+        transform: translateX(-80%)
+      90% 
+        transform: translateX(-90%)
+      100% 
+        transform: translateX(-90%)
+
+    .indicators
+        position: absolute
+        bottom: 10px
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        gap: 5px
+
+    .indicator
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background: #bbb        
+        
+    @keyframes indicator-animation 
+      0%, 10%
+            background: #007bff
+      12%, 22%
+          background: #bbb
+      24%, 34%
+          background: #bbb
+      36%, 46%
+          background: #bbb
+      48%, 58%
+          background: #bbb
+      60%, 70%
+          background: #bbb
+      72%, 82%
+          background: #bbb
+      84%, 94%
+          background: #bbb
+      96%, 100%
+          background: #bbb
+
+
+    .indicator:nth-child(1)
+        animation: indicator-animation 55s infinite
+
+    .indicator:nth-child(2)
+        animation: indicator-animation 55s infinite 5.5s
+
+    .indicator:nth-child(3)
+        animation: indicator-animation 55s infinite 11s
+
+    .indicator:nth-child(4)
+        animation: indicator-animation 55s infinite 16.5s
+
+    .indicator:nth-child(5)
+        animation: indicator-animation 55s infinite 22s
+
+    .indicator:nth-child(6)
+        animation: indicator-animation 55s infinite 27.5s
+
+    .indicator:nth-child(7)
+        animation: indicator-animation 55s infinite 33s
+
+    .indicator:nth-child(8)
+        animation: indicator-animation 55s infinite 38.5s
+
+    .indicator:nth-child(9)
+        animation: indicator-animation 55s infinite 44s
+
+    .indicator:nth-child(10)
+        animation: indicator-animation 55s infinite 49.5s
+
+    img
+      width: 50vw
+      position: absolute
+    
+    .eurovision
+      top: -20px
+      clip-path: inset(20 0 145 0)
+    
+    .fernando
+      top: -184px
+      clip-path: inset(164 0 104 0)
+
+    .dancing-queen
+      top: -50px
+      clip-path: inset(12 0 0 0)
+
+    .movie
+      top: -165px
+      clip-path: inset(145 0 287 0)
+
+    .gira
+      top: -108px
+      clip-path: inset(108 0 142 0)
+
+    .fama
+      top: -39px
+      clip-path: inset(39 0 93 0)
+
+    .reunion
+      top: -121px
+      clip-path: inset(121 0 0 0)
+  
+    @media (max-width: 1000px)
+      width: 60vw
+
+      img
+        width: 60vw
+      
+      .eurovision
+        top: -20px
+        clip-path: inset(20 0 125 0)
+      
+      .fernando
+        top: -104px
+        clip-path: inset(104 0 94 0)
+
+      .dancing-queen
+        top: -12px
+        clip-path: inset(12 0 0 0)
+
+      .movie
+        top: -145px
+        clip-path: inset(145 0 267 0)
+
+      .gira
+        top: -108px
+        clip-path: inset(108 0 122 0)
+
+      .fama
+        top: -39px
+        clip-path: inset(39 0 73 0)
+
+      .reunion
+        top: -101px
+        clip-path: inset(101 0 0 0)
+
+    @media (max-width: 790px)
+      
+      .eurovision
+        top: 0px
+        clip-path: inset(0 0 0 0)
+      
+      .fernando
+        top: -84px
+        clip-path: inset(84 0 0 0)
+
+      .dancing-queen
+        top: 0px
+        clip-path: inset(0 0 0 0)
+
+      .movie
+        top: -165px
+        clip-path: inset(165 0 0 0)
+
+      .gira
+        top: -108px
+        clip-path: inset(108 0 0 0)
+        
+      .fama
+        top: 0px
+        clip-path: inset(0 0 0 0)
+
+      .reunion
+        top: 0px
+        clip-path: inset(0 0 0 0)
+    
+    @media (max-width: 650px)
+      height: 150px
+
+    @media (max-width: 500px)
+      height: 125px
+
+      .gira
+        top: -60px
+        clip-path: inset(60 0 0 0)
+    
+    @media (max-width: 400px)
+      height: 100px

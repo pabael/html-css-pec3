@@ -1,0 +1,61 @@
+@import 'colors'
+
+.discos-container
+    display: flex
+    flex-direction: column
+
+    .legado
+        margin-bottom: 30px
+        text-align: justify
+        display: flex
+        flex-direction: column
+
+    .discos
+        margin: 30px 0px
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
+    
+        h2
+            text-align: center
+
+    h2
+        margin: 0
+
+    p
+        margin: 5px
+
+    figure
+        margin-top: 0
+        margin-bottom: 30px
+
+    img
+        width: 15vw
+
+    figcaption
+        text-align: right
+        width: 15vw
+        font-size: 0.7em
+
+    .album
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        p
+            text-align: center
+
+    @media (max-width: 767px)
+        .discos
+            grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr))
+
+        img
+            width: 20vw
+
+    @media (max-width: 500px)
+        .discos
+            display: flex
+            flex-direction: column
+
+        img
+            width: 40vw
