@@ -14,16 +14,6 @@
     flex-direction: column
     position: relative
 
-    .vertical-line
-      width: 3px
-      height: 100%
-      background-color: var(--main-color)
-      position: absolute
-      left: 50%
-      
-      @media (max-width: 767px)
-        left: 0%
-
     li
       width:50%
       margin: 0
@@ -48,6 +38,16 @@
         text-align: left
         align-self: end
         padding-right: 60px
+
+  .vertical-line
+    width: 3px
+    height: 100%
+    background-color: var(--main-color)
+    position: absolute
+    left: 50%
+  
+    @media (max-width: 767px)
+      left: 0%
 
   .carousel
     margin: auto
